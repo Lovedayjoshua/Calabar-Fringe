@@ -1,123 +1,560 @@
-<<<<<<< HEAD
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
-<link rel="icon" type="image/jpeg" sizes="16x16" href="favicon-16x16.jpg">
-<link rel="icon" type="image/jpeg" sizes="32x32" href="favicon-32x32.jpg">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.jpg"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body class="formpage">
-=======
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
->>>>>>> aa281de (Update artist submission form with multi-step wizard, optional fields, and Formspree backend)
-<title>Call for artists | Calabar Fringe 2026</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2A0D3F">
+<meta name="description" content="Submit your work to Calabar Fringe 2026.">
+
+<title>Call for Artists | Calabar Fringe 2026</title>
+
+<link rel="icon" type="image/jpeg" sizes="16x16" href="favicon-16x16.jpg">
+<link rel="icon" type="image/jpeg" sizes="32x32" href="favicon-32x32.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  color-scheme:light;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#FBF7F4; --surface:#FFFFFF; --fg:#2B1A38; --muted:#6A5877; --line:#E8DCE9;
-  --plum:#2A0D3F; --purple:#4A1570; --orange:#FB9A52; --peach:#FDE4D3; --gold:#E8B04A;
-  --accent:#4A1570; --accent-fg:#FFFFFF; --card:#FDE4D3; --logo-bg:#FFFFFF;
+:root {
+  color-scheme: light;
+  --bg:#FBF7F4;
+  --surface:#FFFFFF;
+  --fg:#2B1A38;
+  --muted:#6A5877;
+  --line:#E8DCE9;
+  --plum:#2A0D3F;
+  --purple:#4A1570;
+  --orange:#FB9A52;
+  --peach:#FDE4D3;
+  --gold:#E8B04A;
+  --accent:#4A1570;
+  --accent-fg:#FFFFFF;
+  --card:#FDE4D3;
   --display:'Bricolage Grotesque','Arial Black',system-ui,sans-serif;
   --body:'Figtree',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
 }
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#150A20; --surface:#1F1130; --fg:#F4EAF7; --muted:#B9A6C6; --line:#3A2650;
-    --accent:#FB9A52; --accent-fg:#2A0D3F; --card:#2B1842; color-scheme:dark
+
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#150A20;
+    --surface:#1F1130;
+    --fg:#F4EAF7;
+    --muted:#B9A6C6;
+    --line:#3A2650;
+    --accent:#FB9A52;
+    --accent-fg:#2A0D3F;
+    --card:#2B1842;
+    color-scheme:dark;
   }
 }
-:root[data-theme="dark"]{
-  --bg:#150A20; --surface:#1F1130; --fg:#F4EAF7; --muted:#B9A6C6; --line:#3A2650;
-  --accent:#FB9A52; --accent-fg:#2A0D3F; --card:#2B1842; color-scheme:dark
+
+:root[data-theme="dark"] {
+  --bg:#150A20;
+  --surface:#1F1130;
+  --fg:#F4EAF7;
+  --muted:#B9A6C6;
+  --line:#3A2650;
+  --accent:#FB9A52;
+  --accent-fg:#2A0D3F;
+  --card:#2B1842;
+  color-scheme:dark;
 }
-*{box-sizing:border-box}
-body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6}
-img{max-width:100%}
-[hidden]:not([hidden=until-found i]){display:none!important}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance}
-p{margin:0 0 1em;max-width:62ch}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
 
-/* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--plum);color:#fff}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--plum);z-index:30}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
-.brand{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
-.brand span{color:var(--orange)}
+* {
+  box-sizing:border-box;
+}
 
-section{scroll-margin-top:56px;padding-block:72px}
+html {
+  scroll-padding-top:env(safe-area-inset-top,0px);
+  scroll-behavior:smooth;
+}
 
-/* hero */
-.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden}
-.hero .wrap{padding-block:56px 64px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;position:relative;z-index:1}
-.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.hero h1{font-size:clamp(2.6rem,7.4vw,5.2rem);font-weight:800;letter-spacing:-.02em}
-.hero .lead{font-size:1.15rem;color:#E9D9F1;margin:22px 0 28px;max-width:46ch}
-.cross{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.5;pointer-events:none}
-@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}}
+body {
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+}
 
-.kicker{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-h2{font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:800;letter-spacing:-.015em;margin-bottom:22px}
+img {
+  max-width:100%;
+}
 
-/* open call */
-.call{background:var(--plum);color:#fff}
-.call .kicker{color:var(--gold)}
-.call p{color:#E9D9F1}
-.rows{display:grid;gap:0;margin-top:12px;border-top:1px solid rgba(255,255,255,.2)}
-.row{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.2)}
-.row b{font-family:var(--display);font-size:1.1rem;color:var(--orange)}
-.row span{color:#E9D9F1}
-@media (max-width:640px){.row{grid-template-columns:1fr;gap:4px}}
-.note{margin-top:22px;font-size:.92rem;color:#E9D9F1}
+[hidden]:not([hidden=until-found i]) {
+  display:none!important;
+}
 
-/* artist form */
-.formpage .hero.solo .wrap{grid-template-columns:1fr;padding-block:48px}
-.formpage .hero.solo .lead{margin-bottom:0}
-.formwrap{max-width:760px}
-.formwrap .intro{color:var(--muted);margin-bottom:26px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px;margin-bottom:18px}
-.card h3{font-size:1.3rem;margin-bottom:20px}
-.q{border:0;margin:0 0 24px;padding:0;min-width:0}
-.q:last-child{margin-bottom:0}
-.lab{display:block;font-weight:600;margin:0 0 4px;padding:0}
-.req{color:var(--accent)}
-.opt-tag{font-weight:400;color:var(--muted);font-size:.9em}
-.hint{font-size:.88rem;color:var(--muted);margin:0 0 9px;max-width:none}
-.q input[type=text],.q input[type=tel],.q input[type=url],.q input[type=number],.q textarea{width:100%;font:inherit;padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
-.q textarea{min-height:120px;resize:vertical}
-.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px}
-.opt{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);cursor:pointer;line-height:1.35}
-.opt input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--accent)}
-.opt:has(input:checked){border-color:var(--accent);background:var(--card)}
-.other{margin-top:10px}
-.honey{position:absolute;left:-9999px}
+.wrap {
+  max-width:1080px;
+  margin:0 auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
 
-/* buttons & multi-step navigation */
-button.btn{font:inherit;font-weight:600;cursor:pointer;display:inline-block;padding:13px 28px;border-radius:999px;text-decoration:none;font-size:.98rem;border:2px solid var(--orange)}
-.btn.primary{background:var(--orange);color:var(--plum)}
-.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
-.sendrow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}
-.sendrow p{margin:0;font-size:.9rem;color:var(--muted)}
-.step-indicator{display:flex;gap:8px;margin-bottom:20px;font-weight:600;font-size:.9rem;color:var(--muted)}
-.step-indicator .active-step{color:var(--accent)}
-.form-step{display:none}
-.form-step.active{display:block}
+h1,h2,h3 {
+  font-family:var(--display);
+  line-height:1.05;
+  margin:0;
+  text-wrap:balance;
+}
 
-footer{background:var(--plum);color:#CDB9DA;font-size:.85rem}
-footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+p {
+  margin:0 0 1em;
+  max-width:62ch;
+}
+
+a {
+  color:inherit;
+}
+
+:focus-visible {
+  outline:3px solid var(--orange);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* Navigation */
+
+.nav {
+  position:sticky;
+  top:env(safe-area-inset-top,0px);
+  z-index:20;
+  background:var(--plum);
+  color:#fff;
+}
+
+body::before {
+  content:"";
+  position:fixed;
+  inset:0 0 auto;
+  height:env(safe-area-inset-top,0px);
+  background:var(--plum);
+  z-index:30;
+}
+
+.nav .wrap {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  min-height:56px;
+}
+
+.brand {
+  font-family:var(--display);
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:.02em;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.brand span {
+  color:var(--orange);
+}
+
+section {
+  scroll-margin-top:56px;
+  padding-block:72px;
+}
+
+/* Hero */
+
+.hero {
+  background:var(--plum);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero .wrap {
+  padding-block:56px 64px;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:40px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+.eyebrow {
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+
+.hero h1 {
+  font-size:clamp(2.6rem,7.4vw,5.2rem);
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+
+.hero .lead {
+  font-size:1.15rem;
+  color:#E9D9F1;
+  margin:22px 0 28px;
+  max-width:46ch;
+}
+
+.cross {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  opacity:.5;
+  pointer-events:none;
+}
+
+@media(max-width:820px) {
+  .hero .wrap {
+    grid-template-columns:1fr;
+  }
+}
+
+.kicker {
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+
+h2 {
+  font-size:clamp(1.9rem,4.4vw,2.9rem);
+  font-weight:800;
+  letter-spacing:-.015em;
+  margin-bottom:22px;
+}
+
+/* Open call */
+
+.call {
+  background:var(--plum);
+  color:#fff;
+}
+
+.call .kicker {
+  color:var(--gold);
+}
+
+.call p {
+  color:#E9D9F1;
+}
+
+.rows {
+  display:grid;
+  gap:0;
+  margin-top:12px;
+  border-top:1px solid rgba(255,255,255,.2);
+}
+
+.row {
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:20px;
+  padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.row b {
+  font-family:var(--display);
+  font-size:1.1rem;
+  color:var(--orange);
+}
+
+.row span {
+  color:#E9D9F1;
+}
+
+@media(max-width:640px) {
+  .row {
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+}
+
+.note {
+  margin-top:22px;
+  font-size:.92rem;
+  color:#E9D9F1;
+}
+
+/* Artist form */
+
+.formpage .hero.solo .wrap {
+  grid-template-columns:1fr;
+  padding-block:48px;
+}
+
+.formpage .hero.solo .lead {
+  margin-bottom:0;
+}
+
+.formwrap {
+  max-width:760px;
+}
+
+.formwrap .intro {
+  color:var(--muted);
+  margin-bottom:26px;
+}
+
+.card {
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:26px;
+  margin-bottom:18px;
+}
+
+.card h3 {
+  font-size:1.3rem;
+  margin-bottom:20px;
+}
+
+.q {
+  border:0;
+  margin:0 0 24px;
+  padding:0;
+  min-width:0;
+}
+
+.q:last-child {
+  margin-bottom:0;
+}
+
+.lab {
+  display:block;
+  font-weight:600;
+  margin:0 0 4px;
+  padding:0;
+}
+
+.req {
+  color:var(--accent);
+}
+
+.opt-tag {
+  font-weight:400;
+  color:var(--muted);
+  font-size:.9em;
+}
+
+.hint {
+  font-size:.88rem;
+  color:var(--muted);
+  margin:0 0 9px;
+  max-width:none;
+}
+
+.q input[type=text],
+.q input[type=tel],
+.q input[type=url],
+.q input[type=number],
+.q textarea {
+  width:100%;
+  font:inherit;
+  padding:11px 13px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--bg);
+  color:var(--fg);
+}
+
+.q textarea {
+  min-height:120px;
+  resize:vertical;
+}
+
+.opts {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:8px;
+}
+
+.opt {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--bg);
+  cursor:pointer;
+  line-height:1.35;
+}
+
+.opt input {
+  width:20px;
+  height:20px;
+  margin:0;
+  flex:none;
+  accent-color:var(--accent);
+}
+
+.opt:has(input:checked) {
+  border-color:var(--accent);
+  background:var(--card);
+}
+
+.other {
+  margin-top:10px;
+}
+
+.honey {
+  position:absolute;
+  left:-9999px;
+}
+
+/* Buttons and multi-step navigation */
+
+button.btn {
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+  display:inline-block;
+  padding:13px 28px;
+  border-radius:999px;
+  font-size:.98rem;
+  border:2px solid var(--orange);
+}
+
+.btn.primary {
+  background:var(--orange);
+  color:var(--plum);
+}
+
+.btn.primary:hover {
+  background:#FFB27A;
+}
+
+.btn.ghost {
+  background:transparent;
+  color:var(--fg);
+  border-color:var(--line);
+}
+
+.sendrow {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-top:24px;
+}
+
+.sendrow p {
+  margin:0;
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+.step-indicator {
+  display:flex;
+  gap:8px;
+  margin-bottom:20px;
+  font-weight:600;
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+.step-indicator .active-step {
+  color:var(--accent);
+}
+
+.form-step {
+  display:none;
+}
+
+.form-step.active {
+  display:block;
+}
+
+.form-message {
+  padding:15px;
+  margin-top:18px;
+  border-radius:8px;
+  background:var(--card);
+  color:var(--fg);
+  display:none;
+}
+
+.form-message.visible {
+  display:block;
+}
+
+footer {
+  background:var(--plum);
+  color:#CDB9DA;
+  font-size:.85rem;
+}
+
+footer .wrap {
+  padding-block:22px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px;
+}
+
+@media(max-width:600px) {
+  body {
+    font-size:16px;
+  }
+
+  .formpage .hero.solo .wrap {
+    padding-top:28px;
+    padding-bottom:30px;
+  }
+
+  section {
+    padding-block:42px;
+  }
+
+  .card {
+    padding:19px;
+  }
+
+  .opts {
+    grid-template-columns:1fr;
+  }
+
+  button.btn {
+    padding:12px 20px;
+  }
+
+  .sendrow {
+    gap:12px;
+  }
+
+  .sendrow button {
+    width:100%;
+  }
+
+  footer .wrap {
+    flex-direction:column;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+}
 </style>
 </head>
+
 <body class="formpage">
 
 <header class="nav">
@@ -127,12 +564,14 @@ footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:spac
 </header>
 
 <main id="top">
+
 <div class="hero solo">
   <svg class="cross" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none">
     <path d="M-40 420 C 260 420, 420 120, 700 120 S 1100 300, 1260 80" stroke="#FB9A52" stroke-width="2"/>
     <path d="M-40 90 C 240 90, 480 440, 760 400 S 1100 140, 1260 330" stroke="#E8B04A" stroke-width="2"/>
     <circle cx="560" cy="268" r="9" fill="#FB9A52"/>
   </svg>
+
   <div class="wrap">
     <div>
       <div class="eyebrow">Call for artists</div>
@@ -142,151 +581,370 @@ footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:spac
   </div>
 </div>
 
-<section id="open-call" class="call"><div class="wrap">
-  <div class="kicker">Open call</div>
-  <h2>Bring us your work</h2>
-  <p>Calabar Fringe welcomes submissions from artists anywhere in the world. Every entry is read by a selection panel.</p>
-  <div class="rows">
-    <div class="row"><b>Short film</b><span>Films up to 20 minutes, completed on or after 1 January 2024, any genre. Entries are taken through FilmFreeway, and Nigerian filmmakers enter free. Final deadline 6 November 2026, with selections announced by 20 November.</span></div>
-    <div class="row"><b>Theatre</b><span>New plays up to one hour, and shorter pieces for the daily programme.</span></div>
-    <div class="row"><b>Music, comedy, poetry, dance</b><span>Live acts for the daily programme.</span></div>
-    <div class="row"><b>Visual art</b><span>Work for the exhibition that runs through the festival days.</span></div>
-  </div>
-  <p class="note">For theatre, live acts and visual art, fill in the form below. The FilmFreeway link for short films will appear here when the listing goes live.</p>
-</div></section>
+<section id="open-call" class="call">
+  <div class="wrap">
+    <div class="kicker">Open call</div>
+    <h2>Bring us your work</h2>
+    <p>Calabar Fringe welcomes submissions from artists anywhere in the world. Every entry is read by a selection panel.</p>
 
-<section id="apply"><div class="wrap formwrap">
-  <div class="kicker">Apply</div>
-  <h2>Your production</h2>
-  <div class="step-indicator">
-    <span id="step-tag" class="active-step">Section 1 of 2: Production &amp; Contact Info</span>
-  </div>
-  <p class="intro">Fields marked * are required.</p>
-<<<<<<< HEAD
-  <div class="card">
-  <div class="sendrow">
-    <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfxWc-8R-Y_iKgkmEd8EwZHsHAK2_8Ss47G5p7bs49V0Tkwfw/viewform" target="_blank" rel="noopener noreferrer">Send submission</a>
-    <p>Questions? See the contact details on the <a href="menu.html#contact">menu page</a>.</p>
-  </div>
-</div>
-=======
-  
-  <!-- Formspree Endpoint Connected -->
-  <form id="artistForm" action="https://formspree.io/f/mqppyewg" method="POST">
-    <input type="hidden" name="_subject" value="Calabar Fringe 2026 artist submission">
-    <input type="hidden" name="_template" value="table">
-    <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-    
-    <!-- PHASE 1 -->
-    <div id="phase1" class="form-step active">
-      <div class="card"><h3>The production</h3>
-        <div class="q"><label class="lab" for="f1">Name of Lead Artist / Production Company / Collective <span class="req" aria-hidden="true">*</span></label><input id="f1" name="Lead artist / production company / collective" type="text" required></div>
-        <div class="q"><label class="lab" for="f2">Title of Production / Showcase <span class="req" aria-hidden="true">*</span></label><p class="hint">If you have recently updated the working title, please state both previous and current titles.</p><input id="f2" name="Title of production / showcase" type="text" required></div>
-        <fieldset class="q"><legend class="lab">Artistic Discipline / Category <span class="req" aria-hidden="true">*</span></legend><div class="opts"><label class="opt"><input type="radio" name="Artistic discipline" value="Theatre / Drama" required><span>Theatre / Drama</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Dance / Physical Theatre" required><span>Dance / Physical Theatre</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Spoken Word / Poetry" required><span>Spoken Word / Poetry</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Music / Acoustic Live Set" required><span>Music / Acoustic Live Set</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Visual Art / Live Exhibition" required><span>Visual Art / Live Exhibition</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Comedy / Variety" required><span>Comedy / Variety</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Film Screening" required><span>Film Screening</span></label><label class="opt"><input type="radio" name="Artistic discipline" value="Other" required><span>Other</span></label></div><input class="other" type="text" name="Other discipline" aria-label="If other, please specify" placeholder="If other, please specify"></fieldset>
-      </div>
-      
-      <div class="card"><h3>Contact and crew</h3>
-        <div class="q"><label class="lab" for="f3">Primary Contact Person &amp; Production Role <span class="req" aria-hidden="true">*</span></label><p class="hint">e.g., Director, Producer, Stage Manager, Lead Performer.</p><input id="f3" name="Primary contact person and role" type="text" required></div>
-        <div class="q"><label class="lab" for="f4">WhatsApp / Direct Mobile Number <span class="req" aria-hidden="true">*</span></label><input id="f4" name="WhatsApp / mobile number" type="tel" required></div>
-      </div>
-      
-      <div class="card"><h3>Timing</h3>
-        <div class="q"><label class="lab" for="f6">Estimated Performance Running Time <span class="req" aria-hidden="true">*</span></label><input id="f6" name="Estimated running time" type="text" required></div>
-        <div class="q"><label class="lab" for="f7">Bump-In (Setup) Time Needed</label><p class="hint">Minutes needed on stage before show starts to set props and instruments (e.g., 10 mins).</p><input id="f7" name="Bump-in (setup) time" type="text"></div>
-        <div class="q"><label class="lab" for="f8">Bump-Out (Teardown) Time Needed</label><p class="hint">Minutes needed immediately after performance to strike the stage (e.g., 5 mins).</p><input id="f8" name="Bump-out (teardown) time" type="text"></div>
+    <div class="rows">
+      <div class="row">
+        <b>Short film</b>
+        <span>Films up to 20 minutes, completed on or after 1 January 2024, any genre. Entries are taken through FilmFreeway, and Nigerian filmmakers enter free. Final deadline 6 November 2026, with selections announced by 20 November.</span>
       </div>
 
-      <div class="sendrow">
-        <div></div>
-        <button type="button" id="nextBtn" class="btn primary">Next section &rarr;</button>
+      <div class="row">
+        <b>Theatre</b>
+        <span>New plays up to one hour, and shorter pieces for the daily programme.</span>
+      </div>
+
+      <div class="row">
+        <b>Music, comedy, poetry, dance</b>
+        <span>Live acts for the daily programme.</span>
+      </div>
+
+      <div class="row">
+        <b>Visual art</b>
+        <span>Work for the exhibition that runs through the festival days.</span>
       </div>
     </div>
 
-    <!-- PHASE 2 -->
+    <p class="note">For theatre, live acts and visual art, fill in the form below. The FilmFreeway link for short films will appear here when the listing goes live.</p>
+  </div>
+</section>
+
+<section id="apply">
+<div class="wrap formwrap">
+
+  <div class="kicker">Apply</div>
+  <h2>Your production</h2>
+
+  <div class="step-indicator">
+    <span id="step-tag" class="active-step">Section 1 of 2: Production &amp; Contact Info</span>
+  </div>
+
+  <p class="intro">Fields marked * are required.</p>
+
+  <form id="artistForm" action="https://formspree.io/f/mqppyewg" method="POST">
+
+    <input type="hidden" name="_subject" value="Calabar Fringe 2026 artist submission">
+    <input type="hidden" name="_template" value="table">
+
+    <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <!-- SECTION 1 -->
+
+    <div id="phase1" class="form-step active">
+
+      <div class="card">
+        <h3>The production</h3>
+
+        <div class="q">
+          <label class="lab" for="f1">Name of Lead Artist / Production Company / Collective <span class="req">*</span></label>
+          <input id="f1" name="Lead artist / production company / collective" type="text" required>
+        </div>
+
+        <div class="q">
+          <label class="lab" for="f2">Title of Production / Showcase <span class="req">*</span></label>
+          <p class="hint">If you have recently updated the working title, please state both previous and current titles.</p>
+          <input id="f2" name="Title of production / showcase" type="text" required>
+        </div>
+
+        <fieldset class="q">
+          <legend class="lab">Artistic Discipline / Category <span class="req">*</span></legend>
+
+          <div class="opts">
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Theatre / Drama" required><span>Theatre / Drama</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Dance / Physical Theatre"><span>Dance / Physical Theatre</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Spoken Word / Poetry"><span>Spoken Word / Poetry</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Music / Acoustic Live Set"><span>Music / Acoustic Live Set</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Visual Art / Live Exhibition"><span>Visual Art / Live Exhibition</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Comedy / Variety"><span>Comedy / Variety</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Film Screening"><span>Film Screening</span></label>
+            <label class="opt"><input type="radio" name="Artistic discipline" value="Other"><span>Other</span></label>
+          </div>
+
+          <input class="other" type="text" name="Other discipline" aria-label="If other, please specify" placeholder="If other, please specify">
+        </fieldset>
+      </div>
+
+      <div class="card">
+        <h3>Contact and crew</h3>
+
+        <div class="q">
+          <label class="lab" for="f3">Primary Contact Person &amp; Production Role <span class="req">*</span></label>
+          <p class="hint">e.g., Director, Producer, Stage Manager, Lead Performer.</p>
+          <input id="f3" name="Primary contact person and role" type="text" required>
+        </div>
+
+        <div class="q">
+          <label class="lab" for="f4">WhatsApp / Direct Mobile Number <span class="req">*</span></label>
+          <input id="f4" name="WhatsApp / mobile number" type="tel" required>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Timing</h3>
+
+        <div class="q">
+          <label class="lab" for="f6">Estimated Performance Running Time <span class="req">*</span></label>
+          <input id="f6" name="Estimated running time" type="text" required>
+        </div>
+
+        <div class="q">
+          <label class="lab" for="f7">Bump-In (Setup) Time Needed</label>
+          <p class="hint">Minutes needed on stage before show starts to set props and instruments (e.g., 10 mins).</p>
+          <input id="f7" name="Bump-in (setup) time" type="text">
+        </div>
+
+        <div class="q">
+          <label class="lab" for="f8">Bump-Out (Teardown) Time Needed</label>
+          <p class="hint">Minutes needed immediately after performance to strike the stage (e.g., 5 mins).</p>
+          <input id="f8" name="Bump-out (teardown) time" type="text">
+        </div>
+      </div>
+
+      <div class="sendrow">
+        <span></span>
+        <button type="button" id="nextBtn" class="btn primary">Next section →</button>
+      </div>
+
+    </div>
+
+    <!-- SECTION 2 -->
+
     <div id="phase2" class="form-step">
-      <div class="card"><h3>Space and audience</h3>
-        <fieldset class="q"><legend class="lab">Preferred Space / Staging Format</legend><div class="opts"><label class="opt"><input type="radio" name="Preferred staging format" value="Raised Proscenium Stage"><span>Raised Proscenium Stage</span></label><label class="opt"><input type="radio" name="Preferred staging format" value="In-the-Round / Arena"><span>In-the-Round / Arena</span></label><label class="opt"><input type="radio" name="Preferred staging format" value="Outdoor Lawn / Park (Millennium Park 11-11)"><span>Outdoor Lawn / Park (Millennium Park 11-11)</span></label><label class="opt"><input type="radio" name="Preferred staging format" value="Gallery / Exhibition Wall"><span>Gallery / Exhibition Wall</span></label><label class="opt"><input type="radio" name="Preferred staging format" value="Intimate / Acoustic Corner"><span>Intimate / Acoustic Corner</span></label></div></fieldset>
-        <fieldset class="q"><legend class="lab">Expected / Target Audience Size</legend><div class="opts"><label class="opt"><input type="radio" name="Expected audience size" value="Intimate (Under 50)"><span>Intimate (Under 50)</span></label><label class="opt"><input type="radio" name="Expected audience size" value="Medium (50 – 150)"><span>Medium (50 – 150)</span></label><label class="opt"><input type="radio" name="Expected audience size" value="Large / Festival Crowd (150+)"><span>Large / Festival Crowd (150+)</span></label></div></fieldset>
+
+      <div class="card">
+        <h3>Space and audience</h3>
+
+        <fieldset class="q">
+          <legend class="lab">Preferred Space / Staging Format</legend>
+
+          <div class="opts">
+            <label class="opt"><input type="radio" name="Preferred staging format" value="Raised Proscenium Stage"><span>Raised Proscenium Stage</span></label>
+            <label class="opt"><input type="radio" name="Preferred staging format" value="In-the-Round / Arena"><span>In-the-Round / Arena</span></label>
+            <label class="opt"><input type="radio" name="Preferred staging format" value="Outdoor Lawn / Park (Millennium Park 11-11)"><span>Outdoor Lawn / Park (Millennium Park 11-11)</span></label>
+            <label class="opt"><input type="radio" name="Preferred staging format" value="Gallery / Exhibition Wall"><span>Gallery / Exhibition Wall</span></label>
+            <label class="opt"><input type="radio" name="Preferred staging format" value="Intimate / Acoustic Corner"><span>Intimate / Acoustic Corner</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend class="lab">Expected / Target Audience Size</legend>
+
+          <div class="opts">
+            <label class="opt"><input type="radio" name="Expected audience size" value="Intimate (Under 50)"><span>Intimate (Under 50)</span></label>
+            <label class="opt"><input type="radio" name="Expected audience size" value="Medium (50 – 150)"><span>Medium (50 – 150)</span></label>
+            <label class="opt"><input type="radio" name="Expected audience size" value="Large / Festival Crowd (150+)"><span>Large / Festival Crowd (150+)</span></label>
+          </div>
+        </fieldset>
       </div>
-      
-      <div class="card"><h3>Sound</h3>
-        <fieldset class="q"><legend class="lab">Audio &amp; Sound Requirements</legend><div class="opts"><label class="opt"><input type="checkbox" name="Audio requirements" value="Vocal Microphones"><span>Vocal Microphones</span></label><label class="opt"><input type="checkbox" name="Audio requirements" value="Instrument Microphones / D.I. Boxes"><span>Instrument Microphones / D.I. Boxes</span></label><label class="opt"><input type="checkbox" name="Audio requirements" value="Backtrack Playback (Aux/USB/Bluetooth)"><span>Backtrack Playback (Aux/USB/Bluetooth)</span></label><label class="opt"><input type="checkbox" name="Audio requirements" value="Live Instruments (Drums/Keys/Amps)"><span>Live Instruments (Drums/Keys/Amps)</span></label><label class="opt"><input type="checkbox" name="Audio requirements" value="Completely Unplugged / Acoustic (No sound amplification)"><span>Completely Unplugged / Acoustic (No sound amplification)</span></label></div></fieldset>
-        <div class="q"><label class="lab" for="f10">Specific Audio Details &amp; Microphone Count</label><p class="hint">State exact mic counts, instruments you will bring, or playback cue notes.</p><textarea id="f10" name="Audio details and microphone count"></textarea></div>
+
+      <div class="card">
+        <h3>Sound</h3>
+
+        <fieldset class="q">
+          <legend class="lab">Audio &amp; Sound Requirements</legend>
+
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="Audio requirements" value="Vocal Microphones"><span>Vocal Microphones</span></label>
+            <label class="opt"><input type="checkbox" name="Audio requirements" value="Instrument Microphones / D.I. Boxes"><span>Instrument Microphones / D.I. Boxes</span></label>
+            <label class="opt"><input type="checkbox" name="Audio requirements" value="Backtrack Playback (Aux/USB/Bluetooth)"><span>Backtrack Playback (Aux/USB/Bluetooth)</span></label>
+            <label class="opt"><input type="checkbox" name="Audio requirements" value="Live Instruments (Drums/Keys/Amps)"><span>Live Instruments (Drums/Keys/Amps)</span></label>
+            <label class="opt"><input type="checkbox" name="Audio requirements" value="Completely Unplugged / Acoustic (No sound amplification)"><span>Completely Unplugged / Acoustic (No sound amplification)</span></label>
+          </div>
+        </fieldset>
+
+        <div class="q">
+          <label class="lab" for="f10">Specific Audio Details &amp; Microphone Count</label>
+          <p class="hint">State exact mic counts, instruments you will bring, or playback cue notes.</p>
+          <textarea id="f10" name="Audio details and microphone count"></textarea>
+        </div>
       </div>
-      
-      <div class="card"><h3>Lighting</h3>
-        <fieldset class="q"><legend class="lab">Lighting Requirements</legend><div class="opts"><label class="opt"><input type="checkbox" name="Lighting requirements" value="General Stage Wash (Bright/Even)"><span>General Stage Wash (Bright/Even)</span></label><label class="opt"><input type="checkbox" name="Lighting requirements" value="Mood / Colored Washes"><span>Mood / Colored Washes</span></label><label class="opt"><input type="checkbox" name="Lighting requirements" value="Spotlight / Special Focus Pool"><span>Spotlight / Special Focus Pool</span></label><label class="opt"><input type="checkbox" name="Lighting requirements" value="Complete Blackout Required"><span>Complete Blackout Required</span></label><label class="opt"><input type="checkbox" name="Lighting requirements" value="Daylight / Outdoor Ambient Light is fine"><span>Daylight / Outdoor Ambient Light is fine</span></label></div></fieldset>
+
+      <div class="card">
+        <h3>Lighting</h3>
+
+        <fieldset class="q">
+          <legend class="lab">Lighting Requirements</legend>
+
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="Lighting requirements" value="General Stage Wash (Bright/Even)"><span>General Stage Wash (Bright/Even)</span></label>
+            <label class="opt"><input type="checkbox" name="Lighting requirements" value="Mood / Colored Washes"><span>Mood / Colored Washes</span></label>
+            <label class="opt"><input type="checkbox" name="Lighting requirements" value="Spotlight / Special Focus Pool"><span>Spotlight / Special Focus Pool</span></label>
+            <label class="opt"><input type="checkbox" name="Lighting requirements" value="Complete Blackout Required"><span>Complete Blackout Required</span></label>
+            <label class="opt"><input type="checkbox" name="Lighting requirements" value="Daylight / Outdoor Ambient Light is fine"><span>Daylight / Outdoor Ambient Light is fine</span></label>
+          </div>
+        </fieldset>
       </div>
-      
-      <div class="card"><h3>Safety and props</h3>
-        <fieldset class="q"><legend class="lab">Special Effects, Staging Hazards &amp; Props Declaration</legend><div class="opts"><label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Water/liquids/mess on stage"><span>Water/liquids/mess on stage</span></label><label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Smoke / Haze / Pyrotechnics"><span>Smoke / Haze / Pyrotechnics</span></label><label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Heavy props / Large set furniture"><span>Heavy props / Large set furniture</span></label><label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Strobe / Rapid flashing lights"><span>Strobe / Rapid flashing lights</span></label><label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="None of the above"><span>None of the above</span></label></div></fieldset>
-        <div class="q"><label class="lab" for="f11">Additional Details on Props, Sets, or Safety Requirements</label><textarea id="f11" name="Props, sets and safety details"></textarea></div>
+
+      <div class="card">
+        <h3>Safety and props</h3>
+
+        <fieldset class="q">
+          <legend class="lab">Special Effects, Staging Hazards &amp; Props Declaration</legend>
+
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Water/liquids/mess on stage"><span>Water/liquids/mess on stage</span></label>
+            <label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Smoke / Haze / Pyrotechnics"><span>Smoke / Haze / Pyrotechnics</span></label>
+            <label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Heavy props / Large set furniture"><span>Heavy props / Large set furniture</span></label>
+            <label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="Strobe / Rapid flashing lights"><span>Strobe / Rapid flashing lights</span></label>
+            <label class="opt"><input type="checkbox" name="Special effects, hazards and props" value="None of the above"><span>None of the above</span></label>
+          </div>
+        </fieldset>
+
+        <div class="q">
+          <label class="lab" for="f11">Additional Details on Props, Sets, or Safety Requirements</label>
+          <textarea id="f11" name="Props, sets and safety details"></textarea>
+        </div>
       </div>
-      
-      <!-- Completely Optional Fields (No required attributes) -->
-      <div class="card"><h3>Links and notes</h3>
+
+      <div class="card">
+        <h3>Links and notes</h3>
+
         <div class="q">
           <label class="lab" for="f12">Technical Rider / Stage Plot Link <span class="opt-tag">(Optional)</span></label>
           <p class="hint">Google Drive or Dropbox link to floor plan or technical cue sheet.</p>
           <input id="f12" name="Technical rider / stage plot link" type="url">
         </div>
+
         <div class="q">
           <label class="lab" for="f13">Rehearsal Footage / Sample Work Video Link <span class="opt-tag">(Optional)</span></label>
           <p class="hint">YouTube, Vimeo, or Drive link.</p>
           <input id="f13" name="Rehearsal footage / sample work link" type="url">
         </div>
+
         <div class="q">
           <label class="lab" for="f14">Any Additional Notes or Requests for the Production Team <span class="opt-tag">(Optional)</span></label>
           <textarea id="f14" name="Additional notes"></textarea>
         </div>
       </div>
-      
+
       <div class="sendrow">
-        <button type="button" id="prevBtn" class="btn ghost">&larr; Back</button>
-        <button class="btn primary" type="submit">Send submission</button>
+        <button type="button" id="prevBtn" class="btn ghost">← Back</button>
+        <button class="btn primary" type="submit" id="submitBtn">Send submission</button>
       </div>
+
     </div>
+
+    <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+
   </form>
->>>>>>> aa281de (Update artist submission form with multi-step wizard, optional fields, and Formspree backend)
-</div></section>
+</div>
+</section>
+
 </main>
 
-<footer><div class="wrap"><span>Calabar Fringe 2026 is an initiative of Movie Village Production.</span><span>In partnership with the Cross River State Ministry of Tourism, Arts and Culture.</span></div></footer>
+<footer>
+  <div class="wrap">
+    <span>Calabar Fringe 2026 is an initiative of Movie Village Production.</span>
+    <span>In partnership with the Cross River State Ministry of Tourism, Arts and Culture.</span>
+  </div>
+</footer>
 
 <script>
-  const phase1 = document.getElementById('phase1');
-  const phase2 = document.getElementById('phase2');
-  const nextBtn = document.getElementById('nextBtn');
-  const prevBtn = document.getElementById('prevBtn');
-  const stepTag = document.getElementById('step-tag');
-  const applySection = document.getElementById('apply');
+const form = document.getElementById('artistForm');
+const phase1 = document.getElementById('phase1');
+const phase2 = document.getElementById('phase2');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const stepTag = document.getElementById('step-tag');
+const applySection = document.getElementById('apply');
+const message = document.getElementById('formMessage');
+const submitBtn = document.getElementById('submitBtn');
 
-  nextBtn.addEventListener('click', () => {
-    const inputsPhase1 = phase1.querySelectorAll('input[required], select[required], textarea[required]');
-    let isValid = true;
-    
-    inputsPhase1.forEach(input => {
-      if (!input.checkValidity()) {
-        input.reportValidity();
-        isValid = false;
-        return;
+function showMessage(text, isError = false) {
+  message.textContent = text;
+  message.classList.add('visible');
+  message.style.background = isError ? '#FCE0E0' : 'var(--card)';
+  message.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+nextBtn.addEventListener('click', () => {
+  const requiredFields = phase1.querySelectorAll('[required]');
+  let valid = true;
+
+  for (const field of requiredFields) {
+    if (!field.checkValidity()) {
+      field.reportValidity();
+      valid = false;
+      break;
+    }
+  }
+
+  if (!valid) return;
+
+  phase1.classList.remove('active');
+  phase2.classList.add('active');
+
+  stepTag.textContent = 'Section 2 of 2: Technical & Staging Requirements';
+
+  message.classList.remove('visible');
+
+  applySection.scrollIntoView({
+    behavior:'smooth',
+    block:'start'
+  });
+});
+
+prevBtn.addEventListener('click', () => {
+  phase2.classList.remove('active');
+  phase1.classList.add('active');
+
+  stepTag.textContent = 'Section 1 of 2: Production & Contact Info';
+
+  message.classList.remove('visible');
+
+  applySection.scrollIntoView({
+    behavior:'smooth',
+    block:'start'
+  });
+});
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  if (!form.reportValidity()) return;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending submission...';
+
+  try {
+    const response = await fetch(form.action, {
+      method:'POST',
+      body:new FormData(form),
+      headers:{
+        Accept:'application/json'
       }
     });
 
-    if (isValid) {
-      phase1.classList.remove('active');
-      phase2.classList.add('active');
-      stepTag.textContent = 'Section 2 of 2: Technical & Staging Requirements';
-      applySection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+    if (response.ok) {
+      form.reset();
+      phase2.classList.remove('active');
+      phase1.classList.add('active');
+      stepTag.textContent = 'Section 1 of 2: Production & Contact Info';
 
-  prevBtn.addEventListener('click', () => {
-    phase2.classList.remove('active');
-    phase1.classList.add('active');
-    stepTag.textContent = 'Section 1 of 2: Production & Contact Info';
-    applySection.scrollIntoView({ behavior: 'smooth' });
-  });
+      showMessage('Thank you! Your artist submission has been received successfully.');
+
+      submitBtn.textContent = 'Send submission';
+      submitBtn.disabled = false;
+
+      applySection.scrollIntoView({
+        behavior:'smooth',
+        block:'start'
+      });
+    } else {
+      const result = await response.json().catch(() => ({}));
+      throw new Error(result.errors?.map(error => error.message).join(', ') || 'Unable to send your submission. Please try again.');
+    }
+  } catch (error) {
+    showMessage(error.message || 'Something went wrong. Please check your connection and try again.', true);
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send submission';
+  }
+});
 </script>
 
 </body>
